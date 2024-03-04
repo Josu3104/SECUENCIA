@@ -31,7 +31,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         this.REG_TAB.setVisible(false);
         this.PLAY_TAB.setVisible(false);
         this.MAIN_MENU.setVisible(false);
-        
+        //hola buenas
 
         try {
             managerUsers = new ManagerUsuarios();
