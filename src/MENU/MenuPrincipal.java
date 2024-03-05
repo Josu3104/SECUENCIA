@@ -52,8 +52,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        MAIN_MENU = new javax.swing.JPanel();
-        PLAY = new javax.swing.JButton();
         REG_TAB = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -64,6 +62,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
         Reg_Checkout = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         confPass = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
+        MAIN_MENU = new javax.swing.JPanel();
+        PLAY = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         PLAY_TAB = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -72,6 +74,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         pass1 = new javax.swing.JTextField();
         fullName1 = new javax.swing.JTextField();
         Reg_Checkout1 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         LOG_IN = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -84,77 +87,97 @@ public class MenuPrincipal extends javax.swing.JFrame {
         setResizable(false);
         setSize(new java.awt.Dimension(1920, 1080));
 
-        MAIN_MENU.setBackground(new java.awt.Color(51, 0, 0));
-        MAIN_MENU.setPreferredSize(new java.awt.Dimension(1920, 1080));
-        MAIN_MENU.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        PLAY.setFont(new java.awt.Font("Ravie", 1, 24)); // NOI18N
-        PLAY.setText("JUGAR");
-        PLAY.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PLAYActionPerformed(evt);
-            }
-        });
-        MAIN_MENU.add(PLAY, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 460, 330, 90));
-
         REG_TAB.setBackground(new java.awt.Color(51, 0, 0));
         REG_TAB.setPreferredSize(new java.awt.Dimension(1920, 1080));
         REG_TAB.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Ravie", 1, 24)); // NOI18N
-        jLabel1.setText("NOMBRE COMPLETO");
-        REG_TAB.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 290, 350, 100));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("NOMBRE COMPLETO:");
+        REG_TAB.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 140, 350, 80));
 
         jLabel2.setFont(new java.awt.Font("Ravie", 1, 24)); // NOI18N
-        jLabel2.setText("USUARIO");
-        REG_TAB.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 420, 230, 100));
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("USUARIO:");
+        REG_TAB.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 270, 230, 80));
 
         jLabel3.setFont(new java.awt.Font("Ravie", 1, 24)); // NOI18N
-        jLabel3.setText("CONTRASEñA");
-        REG_TAB.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 540, 230, 100));
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("CONTRASEñA:");
+        REG_TAB.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 380, 230, 100));
 
         us.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         us.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        REG_TAB.add(us, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 420, 550, 80));
+        REG_TAB.add(us, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 260, 550, 80));
 
         pass.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         pass.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        REG_TAB.add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 540, 550, 80));
+        REG_TAB.add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 380, 550, 80));
 
         fullName.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         fullName.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        REG_TAB.add(fullName, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 300, 550, 80));
+        REG_TAB.add(fullName, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 140, 550, 80));
 
-        Reg_Checkout.setFont(new java.awt.Font("Ravie", 1, 24)); // NOI18N
+        Reg_Checkout.setFont(new java.awt.Font("Ravie", 1, 14)); // NOI18N
         Reg_Checkout.setText("REGISTRARSE");
         Reg_Checkout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Reg_CheckoutActionPerformed(evt);
             }
         });
-        REG_TAB.add(Reg_Checkout, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 780, 330, 90));
+        REG_TAB.add(Reg_Checkout, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 660, 210, 50));
 
         jLabel7.setFont(new java.awt.Font("Ravie", 1, 24)); // NOI18N
-        jLabel7.setText("CONFIRMAR CONTRASEñA");
-        REG_TAB.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 640, 430, 100));
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("CONFIRMAR CONTRASEñA:");
+        REG_TAB.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 490, 450, 80));
 
         confPass.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         confPass.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        REG_TAB.add(confPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 650, 550, 80));
+        REG_TAB.add(confPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 490, 550, 80));
+
+        jButton2.setFont(new java.awt.Font("Ravie", 0, 14)); // NOI18N
+        jButton2.setText("VOLVER");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        REG_TAB.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1310, 730, -1, 40));
+
+        MAIN_MENU.setBackground(new java.awt.Color(51, 0, 0));
+        MAIN_MENU.setPreferredSize(new java.awt.Dimension(1920, 1080));
+        MAIN_MENU.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        PLAY.setFont(new java.awt.Font("Ravie", 1, 14)); // NOI18N
+        PLAY.setText("JUGAR");
+        PLAY.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PLAYActionPerformed(evt);
+            }
+        });
+        MAIN_MENU.add(PLAY, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 420, 230, 50));
+
+        jButton3.setFont(new java.awt.Font("Ravie", 0, 14)); // NOI18N
+        jButton3.setText("REPORTES");
+        MAIN_MENU.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 530, 230, 50));
 
         PLAY_TAB.setBackground(new java.awt.Color(51, 0, 0));
         PLAY_TAB.setPreferredSize(new java.awt.Dimension(1920, 1080));
         PLAY_TAB.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setFont(new java.awt.Font("Ravie", 1, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("NOMBRE COMPLETO");
         PLAY_TAB.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 290, 350, 100));
 
         jLabel5.setFont(new java.awt.Font("Ravie", 1, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("USUARIO");
         PLAY_TAB.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 420, 230, 100));
 
         jLabel6.setFont(new java.awt.Font("Ravie", 1, 24)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("CONTRASEñA");
         PLAY_TAB.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 540, 230, 100));
 
@@ -170,47 +193,58 @@ public class MenuPrincipal extends javax.swing.JFrame {
         fullName1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         PLAY_TAB.add(fullName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 300, 550, 80));
 
-        Reg_Checkout1.setFont(new java.awt.Font("Ravie", 1, 24)); // NOI18N
+        Reg_Checkout1.setFont(new java.awt.Font("Ravie", 1, 14)); // NOI18N
         Reg_Checkout1.setText("REGISTRARSE");
-        PLAY_TAB.add(Reg_Checkout1, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 690, 330, 90));
+        PLAY_TAB.add(Reg_Checkout1, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 690, 240, 50));
+
+        jButton1.setFont(new java.awt.Font("Ravie", 0, 14)); // NOI18N
+        jButton1.setText("VOLVER");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        PLAY_TAB.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1320, 710, 140, 40));
 
         LOG_IN.setBackground(new java.awt.Color(51, 0, 0));
         LOG_IN.setPreferredSize(new java.awt.Dimension(1920, 1080));
         LOG_IN.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel9.setFont(new java.awt.Font("Ravie", 1, 24)); // NOI18N
-        jLabel9.setText("USUARIO");
-        LOG_IN.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 420, 230, 100));
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("USUARIO:");
+        LOG_IN.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 230, 80));
 
         jLabel10.setFont(new java.awt.Font("Ravie", 1, 24)); // NOI18N
-        jLabel10.setText("CONTRASEñA");
-        LOG_IN.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 540, 230, 100));
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("CONTRASEñA:");
+        LOG_IN.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 360, 230, 80));
 
         usLogin.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         usLogin.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        LOG_IN.add(usLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 420, 550, 80));
+        LOG_IN.add(usLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 240, 550, 80));
 
         passLogin.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         passLogin.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        LOG_IN.add(passLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 540, 550, 80));
+        LOG_IN.add(passLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 360, 550, 80));
 
-        checkOut.setFont(new java.awt.Font("Ravie", 1, 24)); // NOI18N
+        checkOut.setFont(new java.awt.Font("Ravie", 1, 14)); // NOI18N
         checkOut.setText("INICIAR SESION");
         checkOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 checkOutActionPerformed(evt);
             }
         });
-        LOG_IN.add(checkOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 690, 330, 90));
+        LOG_IN.add(checkOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 520, 250, 60));
 
-        reg.setFont(new java.awt.Font("Ravie", 1, 24)); // NOI18N
+        reg.setFont(new java.awt.Font("Ravie", 1, 14)); // NOI18N
         reg.setText("REGISTRARME");
         reg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 regActionPerformed(evt);
             }
         });
-        LOG_IN.add(reg, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 690, 310, 80));
+        LOG_IN.add(reg, new org.netbeans.lib.awtextra.AbsoluteConstraints(1250, 730, 200, 60));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -344,6 +378,16 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     }//GEN-LAST:event_regActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        this.REG_TAB.setVisible(false);
+                 this.LOG_IN.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -391,6 +435,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JTextField confPass;
     private javax.swing.JTextField fullName;
     private javax.swing.JTextField fullName1;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
