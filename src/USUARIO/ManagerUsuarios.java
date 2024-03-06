@@ -13,8 +13,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.RandomAccessFile;
 import java.util.ArrayList;
-import javax.swing.DefaultListModel;
-import javax.swing.JList;
+import java.util.Arrays;
 
 /**
  *
@@ -117,19 +116,16 @@ public class ManagerUsuarios {
         return tempUser;
     }
 
-    private String[] listUsers() {
+    public ArrayList listUsers() {
         F = new File("Usuarios");
-        return F.list();
+        String[] temp = F.list();
+        ArrayList<String> array = new ArrayList();
+        array.addAll(Arrays.asList(temp));
+        return array;
+        
 
     }
 
-    public DefaultListModel listUsers(JList list) {
-        DefaultListModel<String> model = new DefaultListModel();
-        for (String user : this.listUsers()) {
-
-            model.addElement(user);
-        }
-        return listUsers() != null ? model : null;
-    }
+   
 
 }

@@ -9,7 +9,7 @@ import USUARIO.Usuario;
 import java.awt.Component;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collection;
+import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
@@ -23,7 +23,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
      * Creates new form MenuPrincipal
      */
     public ManagerUsuarios managerUsers;
-    public ArrayList<String> p1, p2, p3;
+    public ArrayList<String> PLAYERS, p1, p2, p3;
     public int cantPlayersSettings;
 
     public MenuPrincipal() {
@@ -46,10 +46,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         } catch (ClassNotFoundException e) {
 
         }
+        PLAYERS = new ArrayList<>();
         p1 = new ArrayList<>();
         p2 = new ArrayList<>();
         p3 = new ArrayList<>();
-        cantPlayersSettings = 3;
+        cantPlayersSettings = 4;
 
     }
 
@@ -91,6 +92,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
         playersTwo = new javax.swing.JList<>();
         tokenColor3 = new javax.swing.JComboBox<>();
         START = new javax.swing.JButton();
+        rem1 = new javax.swing.JButton();
+        rem2 = new javax.swing.JButton();
+        rem3 = new javax.swing.JButton();
         LOG_IN = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -233,7 +237,36 @@ public class MenuPrincipal extends javax.swing.JFrame {
         PLAY_TAB.add(tokenColor3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 720, 160, 30));
 
         START.setText("CONTINUAR");
+        START.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                STARTActionPerformed(evt);
+            }
+        });
         PLAY_TAB.add(START, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 820, 160, 70));
+
+        rem1.setText("remover");
+        rem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rem1ActionPerformed(evt);
+            }
+        });
+        PLAY_TAB.add(rem1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 210, 110, -1));
+
+        rem2.setText("remover");
+        rem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rem2ActionPerformed(evt);
+            }
+        });
+        PLAY_TAB.add(rem2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1530, 210, 110, -1));
+
+        rem3.setText("remover");
+        rem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rem3ActionPerformed(evt);
+            }
+        });
+        PLAY_TAB.add(rem3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1330, 560, 110, -1));
 
         LOG_IN.setBackground(new java.awt.Color(51, 0, 0));
         LOG_IN.setPreferredSize(new java.awt.Dimension(1920, 1080));
@@ -332,16 +365,29 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void PLAYActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PLAYActionPerformed
         this.PLAY_TAB.setVisible(true);
         this.MAIN_MENU.setVisible(false);
-        this.usersList.setModel(this.managerUsers.listUsers(usersList));
-        if (cantPlayersSettings == 3+1 || cantPlayersSettings == 6+1) {
+        this.PLAYERS = managerUsers.listUsers();
+
+        DefaultListModel<String> model = new DefaultListModel<>();
+
+        for (String user : PLAYERS) {
+            model.addElement(user);
+        }
+
+        usersList.setModel(model);
+
+        if (cantPlayersSettings == 3 || cantPlayersSettings == 6) {
             EQUIPO3.setVisible(true);
-            playersThreeSc .setVisible(true);
+            playersThreeSc.setVisible(true);
             tokenColor3.setVisible(true);
         }
 
 
     }//GEN-LAST:event_PLAYActionPerformed
-
+    public void insertPlayer(String p) {
+        DefaultListModel<String> model = (DefaultListModel<String>) usersList.getModel();
+        model.removeElement(p);
+        usersList.setModel(model);
+    }
     private void Reg_CheckoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Reg_CheckoutActionPerformed
         try {
 
@@ -425,98 +471,109 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     private void EQUIPO1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EQUIPO1ActionPerformed
 
-        if (p1.size() > this.cantPlayersSettings) {
-            JOptionPane.showMessageDialog(null, "SE HA ALCANZADO LA CANTIDAD MAXIMA DE JUGADORES PARA ESTE EQUIPO");
-            return;
+        String selected = usersList.getSelectedValue();
+        this.insertPlayer(selected);
+        p1.add(selected);
+
+        DefaultListModel<String> model = new DefaultListModel();
+        for (String a : p1) {
+            model.addElement(a);
         }
 
-        if (this.usersList.getSelectedValue() != null) {
-            String selected = this.usersList.getSelectedValue();
-
-            Collection<String> allPlayers = new ArrayList<>();
-            allPlayers.addAll(p1);
-            allPlayers.addAll(p2);
-            if (cantPlayersSettings == 3+1 || cantPlayersSettings == 6+1) {
-                allPlayers.addAll(p3);
-            }
-
-            if (allPlayers.contains(selected)) {
-                JOptionPane.showMessageDialog(null, "ESTE JUGADOR YA ES PARTE DEL EQUIPO");
-                return;
-            }
-
-            p1.add(selected);
-            this.playersOne.setListData(p1.toArray(String[]::new));
-            this.usersList.clearSelection();
-        } else {
-            JOptionPane.showMessageDialog(null, "SELECCIONE UN JUGADOR PRIMERO");
-        }
+        playersOne.setModel(model);
 
 
     }//GEN-LAST:event_EQUIPO1ActionPerformed
 
     private void EQUIPO3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EQUIPO3ActionPerformed
-        if (p3.size() > this.cantPlayersSettings) {
-            JOptionPane.showMessageDialog(null, "SE HA ALCANZADO LA CANTIDAD MAXIMA DE JUGADORES PARA ESTE EQUIPO");
-            return;
+        String selected = usersList.getSelectedValue();
+        this.insertPlayer(usersList.getSelectedValue());
+        p3.add(selected);
+
+        DefaultListModel<String> model = new DefaultListModel();
+        for (String a : p3) {
+            model.addElement(a);
         }
 
-        if (this.usersList.getSelectedValue() != null) {
-            String selected = this.usersList.getSelectedValue();
-
-            Collection<String> allPlayers = new ArrayList<>();
-            allPlayers.addAll(p1);
-            allPlayers.addAll(p2);
-            if (cantPlayersSettings == 3+1 || cantPlayersSettings == 6+1) {
-                allPlayers.addAll(p3);
-            }
-
-            if (allPlayers.contains(selected)) {
-                JOptionPane.showMessageDialog(null, "ESTE JUGADOR YA ES PARTE DEL EQUIPO");
-                return;
-            }
-
-            p3.add(selected);
-            this.playersThree.setListData(p3.toArray(String[]::new));
-            this.usersList.clearSelection();
-        } else {
-            JOptionPane.showMessageDialog(null, "SELECCIONE UN JUGADOR PRIMERO");
-        }
+        playersThree.setModel(model);
     }//GEN-LAST:event_EQUIPO3ActionPerformed
 
     private void EQUIPO2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EQUIPO2ActionPerformed
-        if (p2.size() > this.cantPlayersSettings) {
-            JOptionPane.showMessageDialog(null, "SE HA ALCANZADO LA CANTIDAD MAXIMA DE JUGADORES PARA ESTE EQUIPO");
-            return;
+        String selected = usersList.getSelectedValue();
+        this.insertPlayer(usersList.getSelectedValue());
+        p2.add(selected);
+
+        DefaultListModel<String> model = new DefaultListModel();
+        for (String a : p2) {
+            model.addElement(a);
         }
 
-        if (this.usersList.getSelectedValue() != null) {
-            String selected = this.usersList.getSelectedValue();
+        playersTwo.setModel(model);
 
-            Collection<String> allPlayers = new ArrayList<>();
-            allPlayers.addAll(p1);
-            allPlayers.addAll(p2);
-            if (cantPlayersSettings == 3+1 || cantPlayersSettings == 6+1) {
-                allPlayers.addAll(p3);
-            }
-
-            if (allPlayers.contains(selected)) {
-                JOptionPane.showMessageDialog(null, "ESTE JUGADOR YA ES PARTE DEL EQUIPO");
-                return;
-            }
-
-            p2.add(selected);
-            this.playersTwo.setListData(p2.toArray(String[]::new));
-            this.usersList.clearSelection();
-        } else {
-            JOptionPane.showMessageDialog(null, "SELECCIONE UN JUGADOR PRIMERO");
-        }
     }//GEN-LAST:event_EQUIPO2ActionPerformed
 
+    public boolean areTeamsEven() {
+
+        if (cantPlayersSettings % 2 == 0) {
+            int total = p1.size() - +1 + p2.size() + 1;
+            if (total > cantPlayersSettings) {
+                return false;
+            } else {
+                return total % 2 == 0;
+            }
+
+        } else {
+            int total = p1.size() + 1 + p2.size() + 1 + p3.size() + 1;
+            if (total > cantPlayersSettings) {
+                return false;
+            } else {
+                return total % 3 == 0;
+            }
+        }
+
+    }
     private void configActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_configActionPerformed
         this.MAIN_MENU.setVisible(false);
         this.CONFIG_TAB.setVisible(true);
     }//GEN-LAST:event_configActionPerformed
+
+    private void STARTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_STARTActionPerformed
+        if (!areTeamsEven()) {
+            JOptionPane.showMessageDialog(null, "DESPROPORCIONADO");
+        }
+    }//GEN-LAST:event_STARTActionPerformed
+
+    private void rem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rem1ActionPerformed
+        DefaultListModel<String> model = (DefaultListModel<String>) playersOne.getModel();
+        DefaultListModel<String> ParentModel = (DefaultListModel<String>) playersThree.getModel();
+        model.removeElement(playersOne.getSelectedValue());
+        p1.remove(playersThree.getSelectedValue());
+        ParentModel.removeElement(playersOne.getSelectedValue());
+        playersOne.setModel(model);
+        usersList.setModel(ParentModel);
+    }//GEN-LAST:event_rem1ActionPerformed
+
+    private void rem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rem2ActionPerformed
+        DefaultListModel<String> model = (DefaultListModel<String>) playersTwo.getModel();
+        DefaultListModel<String> ParentModel = (DefaultListModel<String>) playersThree.getModel();
+        model.removeElement(playersTwo.getSelectedValue());
+        p2.remove(playersThree.getSelectedValue());
+        ParentModel.removeElement(playersTwo.getSelectedValue());
+        playersTwo.setModel(model);
+        usersList.setModel(ParentModel);
+    }//GEN-LAST:event_rem2ActionPerformed
+
+    private void rem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rem3ActionPerformed
+        DefaultListModel<String> model = (DefaultListModel<String>) playersThree.getModel();
+        DefaultListModel<String> ParentModel = (DefaultListModel<String>) playersThree.getModel();
+        model.removeElement(playersThree.getSelectedValue());
+        p3.remove(playersThree.getSelectedValue());
+        ParentModel.removeElement(playersThree.getSelectedValue());
+        playersThree.setModel(model);
+        usersList.setModel(ParentModel);
+
+
+    }//GEN-LAST:event_rem3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -584,6 +641,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JScrollPane playersTwoSc;
     private javax.swing.JScrollPane playesOneSc;
     private javax.swing.JButton reg;
+    private javax.swing.JButton rem1;
+    private javax.swing.JButton rem2;
+    private javax.swing.JButton rem3;
     private javax.swing.JComboBox<String> tokenColor1;
     private javax.swing.JComboBox<String> tokenColor2;
     private javax.swing.JComboBox<String> tokenColor3;
