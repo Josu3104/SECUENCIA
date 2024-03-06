@@ -22,7 +22,7 @@ public class BOARD extends javax.swing.JFrame {
         b = new boardManager();
         b.initBoard(tablero);
         tablero.setLocation(330, 190);
-
+ 
     }
 
     /**
@@ -37,6 +37,251 @@ public class BOARD extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         tablero = new javax.swing.JPanel();
         check = new javax.swing.JButton();
+        barLeft = new javax.swing.JPanel();
+        L1 = new javax.swing.JPanel();
+        name_L1 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        L2 = new javax.swing.JPanel();
+        name_L2 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        L3 = new javax.swing.JPanel();
+        name_L3 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        L4 = new javax.swing.JPanel();
+        name_L4 = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        L5 = new javax.swing.JPanel();
+        name_L5 = new javax.swing.JLabel();
+        jPanel11 = new javax.swing.JPanel();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
+        jLabel43 = new javax.swing.JLabel();
+        jLabel44 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
+        L6 = new javax.swing.JPanel();
+        name_L6 = new javax.swing.JLabel();
+        jPanel13 = new javax.swing.JPanel();
+        jLabel48 = new javax.swing.JLabel();
+        jLabel49 = new javax.swing.JLabel();
+        jLabel50 = new javax.swing.JLabel();
+        jLabel51 = new javax.swing.JLabel();
+        jLabel52 = new javax.swing.JLabel();
+        jLabel53 = new javax.swing.JLabel();
+        jLabel54 = new javax.swing.JLabel();
+        jLabel55 = new javax.swing.JLabel();
+        L7 = new javax.swing.JPanel();
+        name_L7 = new javax.swing.JLabel();
+        jPanel15 = new javax.swing.JPanel();
+        jLabel57 = new javax.swing.JLabel();
+        jLabel58 = new javax.swing.JLabel();
+        jLabel59 = new javax.swing.JLabel();
+        jLabel60 = new javax.swing.JLabel();
+        jLabel61 = new javax.swing.JLabel();
+        jLabel62 = new javax.swing.JLabel();
+        jLabel63 = new javax.swing.JLabel();
+        jLabel64 = new javax.swing.JLabel();
+        L8 = new javax.swing.JPanel();
+        name_L8 = new javax.swing.JLabel();
+        jPanel17 = new javax.swing.JPanel();
+        jLabel66 = new javax.swing.JLabel();
+        jLabel67 = new javax.swing.JLabel();
+        jLabel68 = new javax.swing.JLabel();
+        jLabel69 = new javax.swing.JLabel();
+        jLabel70 = new javax.swing.JLabel();
+        jLabel71 = new javax.swing.JLabel();
+        jLabel72 = new javax.swing.JLabel();
+        jLabel73 = new javax.swing.JLabel();
+        barRight = new javax.swing.JPanel();
+        R1 = new javax.swing.JPanel();
+        jLabel74 = new javax.swing.JLabel();
+        jPanel19 = new javax.swing.JPanel();
+        jLabel75 = new javax.swing.JLabel();
+        jLabel76 = new javax.swing.JLabel();
+        jLabel77 = new javax.swing.JLabel();
+        jLabel78 = new javax.swing.JLabel();
+        jLabel79 = new javax.swing.JLabel();
+        jLabel80 = new javax.swing.JLabel();
+        jLabel81 = new javax.swing.JLabel();
+        jLabel82 = new javax.swing.JLabel();
+        R2 = new javax.swing.JPanel();
+        jLabel83 = new javax.swing.JLabel();
+        jPanel21 = new javax.swing.JPanel();
+        jLabel84 = new javax.swing.JLabel();
+        jLabel85 = new javax.swing.JLabel();
+        jLabel86 = new javax.swing.JLabel();
+        jLabel87 = new javax.swing.JLabel();
+        jLabel88 = new javax.swing.JLabel();
+        jLabel89 = new javax.swing.JLabel();
+        jLabel90 = new javax.swing.JLabel();
+        jLabel91 = new javax.swing.JLabel();
+        R3 = new javax.swing.JPanel();
+        jLabel92 = new javax.swing.JLabel();
+        jPanel23 = new javax.swing.JPanel();
+        jLabel93 = new javax.swing.JLabel();
+        jLabel94 = new javax.swing.JLabel();
+        jLabel95 = new javax.swing.JLabel();
+        jLabel96 = new javax.swing.JLabel();
+        jLabel97 = new javax.swing.JLabel();
+        jLabel98 = new javax.swing.JLabel();
+        jLabel99 = new javax.swing.JLabel();
+        jLabel100 = new javax.swing.JLabel();
+        R4 = new javax.swing.JPanel();
+        jLabel101 = new javax.swing.JLabel();
+        jPanel25 = new javax.swing.JPanel();
+        jLabel102 = new javax.swing.JLabel();
+        jLabel103 = new javax.swing.JLabel();
+        jLabel104 = new javax.swing.JLabel();
+        jLabel105 = new javax.swing.JLabel();
+        jLabel106 = new javax.swing.JLabel();
+        jLabel107 = new javax.swing.JLabel();
+        jLabel108 = new javax.swing.JLabel();
+        jLabel109 = new javax.swing.JLabel();
+        R5 = new javax.swing.JPanel();
+        jLabel110 = new javax.swing.JLabel();
+        jPanel27 = new javax.swing.JPanel();
+        jLabel111 = new javax.swing.JLabel();
+        jLabel112 = new javax.swing.JLabel();
+        jLabel113 = new javax.swing.JLabel();
+        jLabel114 = new javax.swing.JLabel();
+        jLabel115 = new javax.swing.JLabel();
+        jLabel116 = new javax.swing.JLabel();
+        jLabel117 = new javax.swing.JLabel();
+        jLabel118 = new javax.swing.JLabel();
+        R6 = new javax.swing.JPanel();
+        jLabel119 = new javax.swing.JLabel();
+        jPanel29 = new javax.swing.JPanel();
+        jLabel120 = new javax.swing.JLabel();
+        jLabel121 = new javax.swing.JLabel();
+        jLabel122 = new javax.swing.JLabel();
+        jLabel123 = new javax.swing.JLabel();
+        jLabel124 = new javax.swing.JLabel();
+        jLabel125 = new javax.swing.JLabel();
+        jLabel126 = new javax.swing.JLabel();
+        jLabel127 = new javax.swing.JLabel();
+        R7 = new javax.swing.JPanel();
+        jLabel128 = new javax.swing.JLabel();
+        jPanel31 = new javax.swing.JPanel();
+        jLabel129 = new javax.swing.JLabel();
+        jLabel130 = new javax.swing.JLabel();
+        jLabel131 = new javax.swing.JLabel();
+        jLabel132 = new javax.swing.JLabel();
+        jLabel133 = new javax.swing.JLabel();
+        jLabel134 = new javax.swing.JLabel();
+        jLabel135 = new javax.swing.JLabel();
+        jLabel136 = new javax.swing.JLabel();
+        R8 = new javax.swing.JPanel();
+        jLabel137 = new javax.swing.JLabel();
+        jPanel33 = new javax.swing.JPanel();
+        jLabel138 = new javax.swing.JLabel();
+        jLabel139 = new javax.swing.JLabel();
+        jLabel140 = new javax.swing.JLabel();
+        jLabel141 = new javax.swing.JLabel();
+        jLabel142 = new javax.swing.JLabel();
+        jLabel143 = new javax.swing.JLabel();
+        jLabel144 = new javax.swing.JLabel();
+        jLabel145 = new javax.swing.JLabel();
+        barBottom = new javax.swing.JPanel();
+        B1 = new javax.swing.JPanel();
+        name_L9 = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
+        jLabel56 = new javax.swing.JLabel();
+        jLabel65 = new javax.swing.JLabel();
+        jLabel146 = new javax.swing.JLabel();
+        B2 = new javax.swing.JPanel();
+        name_L10 = new javax.swing.JLabel();
+        jPanel7 = new javax.swing.JPanel();
+        jLabel147 = new javax.swing.JLabel();
+        jLabel148 = new javax.swing.JLabel();
+        jLabel149 = new javax.swing.JLabel();
+        jLabel150 = new javax.swing.JLabel();
+        jLabel151 = new javax.swing.JLabel();
+        jLabel152 = new javax.swing.JLabel();
+        jLabel153 = new javax.swing.JLabel();
+        jLabel154 = new javax.swing.JLabel();
+        B3 = new javax.swing.JPanel();
+        name_L11 = new javax.swing.JLabel();
+        jPanel8 = new javax.swing.JPanel();
+        jLabel155 = new javax.swing.JLabel();
+        jLabel156 = new javax.swing.JLabel();
+        jLabel157 = new javax.swing.JLabel();
+        jLabel158 = new javax.swing.JLabel();
+        jLabel159 = new javax.swing.JLabel();
+        jLabel160 = new javax.swing.JLabel();
+        jLabel161 = new javax.swing.JLabel();
+        jLabel162 = new javax.swing.JLabel();
+        B4 = new javax.swing.JPanel();
+        name_L12 = new javax.swing.JLabel();
+        jPanel9 = new javax.swing.JPanel();
+        jLabel163 = new javax.swing.JLabel();
+        jLabel164 = new javax.swing.JLabel();
+        jLabel165 = new javax.swing.JLabel();
+        jLabel166 = new javax.swing.JLabel();
+        jLabel167 = new javax.swing.JLabel();
+        jLabel168 = new javax.swing.JLabel();
+        jLabel169 = new javax.swing.JLabel();
+        jLabel170 = new javax.swing.JLabel();
+        B5 = new javax.swing.JPanel();
+        name_L13 = new javax.swing.JLabel();
+        jPanel12 = new javax.swing.JPanel();
+        jLabel171 = new javax.swing.JLabel();
+        jLabel172 = new javax.swing.JLabel();
+        jLabel173 = new javax.swing.JLabel();
+        jLabel174 = new javax.swing.JLabel();
+        jLabel175 = new javax.swing.JLabel();
+        jLabel176 = new javax.swing.JLabel();
+        jLabel177 = new javax.swing.JLabel();
+        jLabel178 = new javax.swing.JLabel();
+        B6 = new javax.swing.JPanel();
+        name_L14 = new javax.swing.JLabel();
+        jPanel14 = new javax.swing.JPanel();
+        jLabel179 = new javax.swing.JLabel();
+        jLabel180 = new javax.swing.JLabel();
+        jLabel181 = new javax.swing.JLabel();
+        jLabel182 = new javax.swing.JLabel();
+        jLabel183 = new javax.swing.JLabel();
+        jLabel184 = new javax.swing.JLabel();
+        jLabel185 = new javax.swing.JLabel();
+        jLabel186 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -48,7 +293,7 @@ public class BOARD extends javax.swing.JFrame {
 
         tablero.setPreferredSize(new java.awt.Dimension(1100, 700));
         tablero.setLayout(null);
-        jPanel1.add(tablero, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 190, 1260, 700));
+        jPanel1.add(tablero, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 70, 810, 850));
 
         check.setText("checker");
         check.addActionListener(new java.awt.event.ActionListener() {
@@ -56,7 +301,888 @@ public class BOARD extends javax.swing.JFrame {
                 checkActionPerformed(evt);
             }
         });
-        jPanel1.add(check, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 80, 150, 70));
+        jPanel1.add(check, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 200, 150, 70));
+
+        barLeft.setBackground(new java.awt.Color(102, 0, 102));
+        barLeft.setLayout(new java.awt.GridLayout(8, 0, 0, 3));
+
+        L1.setBackground(new java.awt.Color(0, 102, 102));
+        L1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        L1.setPreferredSize(new java.awt.Dimension(65, 540));
+        L1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        name_L1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        name_L1.setText("NAME");
+        L1.add(name_L1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 30));
+
+        jPanel2.setLayout(new java.awt.GridLayout(2, 0, 40, 1));
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel3.setText("AAAAAAA");
+        jPanel2.add(jLabel3);
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel4.setText("AAAAAAA");
+        jPanel2.add(jLabel4);
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel5.setText("AAAAAAA");
+        jPanel2.add(jLabel5);
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel6.setText("AAAAAAA");
+        jPanel2.add(jLabel6);
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel7.setText("AAAAAAA");
+        jPanel2.add(jLabel7);
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel8.setText("AAAAAAA");
+        jPanel2.add(jLabel8);
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel9.setText("AAAAAAA");
+        jPanel2.add(jLabel9);
+
+        L1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 240, 70));
+
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel10.setText("PUNTOS");
+        L1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 50, 30));
+
+        barLeft.add(L1);
+
+        L2.setBackground(new java.awt.Color(0, 102, 102));
+        L2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        L2.setPreferredSize(new java.awt.Dimension(65, 540));
+        L2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        name_L2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        name_L2.setText("NAME");
+        L2.add(name_L2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 30));
+
+        jPanel3.setLayout(new java.awt.GridLayout(2, 0, 40, 1));
+
+        jLabel12.setText("AAAAAAA");
+        jPanel3.add(jLabel12);
+
+        jLabel13.setText("AAAAAAA");
+        jPanel3.add(jLabel13);
+
+        jLabel14.setText("AAAAAAA");
+        jPanel3.add(jLabel14);
+
+        jLabel15.setText("AAAAAAA");
+        jPanel3.add(jLabel15);
+
+        jLabel16.setText("AAAAAAA");
+        jPanel3.add(jLabel16);
+
+        jLabel17.setText("AAAAAAA");
+        jPanel3.add(jLabel17);
+
+        jLabel18.setText("AAAAAAA");
+        jPanel3.add(jLabel18);
+
+        L2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 240, 70));
+
+        jLabel19.setText("PUNTOS");
+        L2.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 50, 30));
+
+        barLeft.add(L2);
+
+        L3.setBackground(new java.awt.Color(0, 102, 102));
+        L3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        L3.setPreferredSize(new java.awt.Dimension(65, 540));
+        L3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        name_L3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        name_L3.setText("NAME");
+        L3.add(name_L3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 30));
+
+        jPanel4.setLayout(new java.awt.GridLayout(2, 0, 40, 1));
+
+        jLabel21.setText("AAAAAAA");
+        jPanel4.add(jLabel21);
+
+        jLabel22.setText("AAAAAAA");
+        jPanel4.add(jLabel22);
+
+        jLabel23.setText("AAAAAAA");
+        jPanel4.add(jLabel23);
+
+        jLabel24.setText("AAAAAAA");
+        jPanel4.add(jLabel24);
+
+        jLabel25.setText("AAAAAAA");
+        jPanel4.add(jLabel25);
+
+        jLabel26.setText("AAAAAAA");
+        jPanel4.add(jLabel26);
+
+        jLabel27.setText("AAAAAAA");
+        jPanel4.add(jLabel27);
+
+        L3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 240, 70));
+
+        jLabel28.setText("PUNTOS");
+        L3.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 50, 30));
+
+        barLeft.add(L3);
+
+        L4.setBackground(new java.awt.Color(0, 102, 102));
+        L4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        L4.setPreferredSize(new java.awt.Dimension(65, 540));
+        L4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        name_L4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        name_L4.setText("NAME");
+        L4.add(name_L4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 30));
+
+        jPanel5.setLayout(new java.awt.GridLayout(2, 0, 40, 1));
+
+        jLabel30.setText("AAAAAAA");
+        jPanel5.add(jLabel30);
+
+        jLabel31.setText("AAAAAAA");
+        jPanel5.add(jLabel31);
+
+        jLabel32.setText("AAAAAAA");
+        jPanel5.add(jLabel32);
+
+        jLabel33.setText("AAAAAAA");
+        jPanel5.add(jLabel33);
+
+        jLabel34.setText("AAAAAAA");
+        jPanel5.add(jLabel34);
+
+        jLabel35.setText("AAAAAAA");
+        jPanel5.add(jLabel35);
+
+        jLabel36.setText("AAAAAAA");
+        jPanel5.add(jLabel36);
+
+        L4.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 240, 70));
+
+        jLabel37.setText("PUNTOS");
+        L4.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 50, 30));
+
+        barLeft.add(L4);
+
+        L5.setBackground(new java.awt.Color(0, 102, 102));
+        L5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        L5.setPreferredSize(new java.awt.Dimension(65, 540));
+        L5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        name_L5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        name_L5.setText("NAME");
+        L5.add(name_L5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 30));
+
+        jPanel11.setLayout(new java.awt.GridLayout(2, 0, 40, 1));
+
+        jLabel39.setText("AAAAAAA");
+        jPanel11.add(jLabel39);
+
+        jLabel40.setText("AAAAAAA");
+        jPanel11.add(jLabel40);
+
+        jLabel41.setText("AAAAAAA");
+        jPanel11.add(jLabel41);
+
+        jLabel42.setText("AAAAAAA");
+        jPanel11.add(jLabel42);
+
+        jLabel43.setText("AAAAAAA");
+        jPanel11.add(jLabel43);
+
+        jLabel44.setText("AAAAAAA");
+        jPanel11.add(jLabel44);
+
+        jLabel45.setText("AAAAAAA");
+        jPanel11.add(jLabel45);
+
+        L5.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 240, 70));
+
+        jLabel46.setText("PUNTOS");
+        L5.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 50, 30));
+
+        barLeft.add(L5);
+
+        L6.setBackground(new java.awt.Color(0, 102, 102));
+        L6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        L6.setPreferredSize(new java.awt.Dimension(65, 540));
+        L6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        name_L6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        name_L6.setText("NAME");
+        L6.add(name_L6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 30));
+
+        jPanel13.setLayout(new java.awt.GridLayout(2, 0, 40, 1));
+
+        jLabel48.setText("AAAAAAA");
+        jPanel13.add(jLabel48);
+
+        jLabel49.setText("AAAAAAA");
+        jPanel13.add(jLabel49);
+
+        jLabel50.setText("AAAAAAA");
+        jPanel13.add(jLabel50);
+
+        jLabel51.setText("AAAAAAA");
+        jPanel13.add(jLabel51);
+
+        jLabel52.setText("AAAAAAA");
+        jPanel13.add(jLabel52);
+
+        jLabel53.setText("AAAAAAA");
+        jPanel13.add(jLabel53);
+
+        jLabel54.setText("AAAAAAA");
+        jPanel13.add(jLabel54);
+
+        L6.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 240, 70));
+
+        jLabel55.setText("PUNTOS");
+        L6.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 50, 30));
+
+        barLeft.add(L6);
+
+        L7.setBackground(new java.awt.Color(0, 102, 102));
+        L7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        L7.setPreferredSize(new java.awt.Dimension(65, 540));
+        L7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        name_L7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        name_L7.setText("NAME");
+        L7.add(name_L7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 30));
+
+        jPanel15.setLayout(new java.awt.GridLayout(2, 0, 40, 1));
+
+        jLabel57.setText("AAAAAAA");
+        jPanel15.add(jLabel57);
+
+        jLabel58.setText("AAAAAAA");
+        jPanel15.add(jLabel58);
+
+        jLabel59.setText("AAAAAAA");
+        jPanel15.add(jLabel59);
+
+        jLabel60.setText("AAAAAAA");
+        jPanel15.add(jLabel60);
+
+        jLabel61.setText("AAAAAAA");
+        jPanel15.add(jLabel61);
+
+        jLabel62.setText("AAAAAAA");
+        jPanel15.add(jLabel62);
+
+        jLabel63.setText("AAAAAAA");
+        jPanel15.add(jLabel63);
+
+        L7.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 240, 70));
+
+        jLabel64.setText("PUNTOS");
+        L7.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 50, 30));
+
+        barLeft.add(L7);
+
+        L8.setBackground(new java.awt.Color(0, 102, 102));
+        L8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        L8.setPreferredSize(new java.awt.Dimension(65, 540));
+        L8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        name_L8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        name_L8.setText("NAME");
+        L8.add(name_L8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 30));
+
+        jPanel17.setLayout(new java.awt.GridLayout(2, 0, 40, 1));
+
+        jLabel66.setText("AAAAAAA");
+        jPanel17.add(jLabel66);
+
+        jLabel67.setText("AAAAAAA");
+        jPanel17.add(jLabel67);
+
+        jLabel68.setText("AAAAAAA");
+        jPanel17.add(jLabel68);
+
+        jLabel69.setText("AAAAAAA");
+        jPanel17.add(jLabel69);
+
+        jLabel70.setText("AAAAAAA");
+        jPanel17.add(jLabel70);
+
+        jLabel71.setText("AAAAAAA");
+        jPanel17.add(jLabel71);
+
+        jLabel72.setText("AAAAAAA");
+        jPanel17.add(jLabel72);
+
+        L8.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 240, 70));
+
+        jLabel73.setText("PUNTOS");
+        L8.add(jLabel73, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 50, 30));
+
+        barLeft.add(L8);
+
+        jPanel1.add(barLeft, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 240, 920));
+
+        barRight.setBackground(new java.awt.Color(102, 0, 102));
+        barRight.setLayout(new java.awt.GridLayout(8, 0, 0, 3));
+
+        R1.setBackground(new java.awt.Color(0, 102, 102));
+        R1.setPreferredSize(new java.awt.Dimension(65, 540));
+        R1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel74.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel74.setText("NAME");
+        R1.add(jLabel74, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 30));
+
+        jPanel19.setLayout(new java.awt.GridLayout(2, 0, 40, 1));
+
+        jLabel75.setText("AAAAAAA");
+        jPanel19.add(jLabel75);
+
+        jLabel76.setText("AAAAAAA");
+        jPanel19.add(jLabel76);
+
+        jLabel77.setText("AAAAAAA");
+        jPanel19.add(jLabel77);
+
+        jLabel78.setText("AAAAAAA");
+        jPanel19.add(jLabel78);
+
+        jLabel79.setText("AAAAAAA");
+        jPanel19.add(jLabel79);
+
+        jLabel80.setText("AAAAAAA");
+        jPanel19.add(jLabel80);
+
+        jLabel81.setText("AAAAAAA");
+        jPanel19.add(jLabel81);
+
+        R1.add(jPanel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 240, 70));
+
+        jLabel82.setText("PUNTOS");
+        R1.add(jLabel82, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 50, 30));
+
+        barRight.add(R1);
+
+        R2.setBackground(new java.awt.Color(0, 102, 102));
+        R2.setPreferredSize(new java.awt.Dimension(65, 540));
+        R2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel83.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel83.setText("NAME");
+        R2.add(jLabel83, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 30));
+
+        jPanel21.setLayout(new java.awt.GridLayout(2, 0, 40, 1));
+
+        jLabel84.setText("AAAAAAA");
+        jPanel21.add(jLabel84);
+
+        jLabel85.setText("AAAAAAA");
+        jPanel21.add(jLabel85);
+
+        jLabel86.setText("AAAAAAA");
+        jPanel21.add(jLabel86);
+
+        jLabel87.setText("AAAAAAA");
+        jPanel21.add(jLabel87);
+
+        jLabel88.setText("AAAAAAA");
+        jPanel21.add(jLabel88);
+
+        jLabel89.setText("AAAAAAA");
+        jPanel21.add(jLabel89);
+
+        jLabel90.setText("AAAAAAA");
+        jPanel21.add(jLabel90);
+
+        R2.add(jPanel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 240, 70));
+
+        jLabel91.setText("PUNTOS");
+        R2.add(jLabel91, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 50, 30));
+
+        barRight.add(R2);
+
+        R3.setBackground(new java.awt.Color(0, 102, 102));
+        R3.setPreferredSize(new java.awt.Dimension(65, 540));
+        R3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel92.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel92.setText("NAME");
+        R3.add(jLabel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 30));
+
+        jPanel23.setLayout(new java.awt.GridLayout(2, 0, 40, 1));
+
+        jLabel93.setText("AAAAAAA");
+        jPanel23.add(jLabel93);
+
+        jLabel94.setText("AAAAAAA");
+        jPanel23.add(jLabel94);
+
+        jLabel95.setText("AAAAAAA");
+        jPanel23.add(jLabel95);
+
+        jLabel96.setText("AAAAAAA");
+        jPanel23.add(jLabel96);
+
+        jLabel97.setText("AAAAAAA");
+        jPanel23.add(jLabel97);
+
+        jLabel98.setText("AAAAAAA");
+        jPanel23.add(jLabel98);
+
+        jLabel99.setText("AAAAAAA");
+        jPanel23.add(jLabel99);
+
+        R3.add(jPanel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 240, 70));
+
+        jLabel100.setText("PUNTOS");
+        R3.add(jLabel100, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 50, 30));
+
+        barRight.add(R3);
+
+        R4.setBackground(new java.awt.Color(0, 102, 102));
+        R4.setPreferredSize(new java.awt.Dimension(65, 540));
+        R4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel101.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel101.setText("NAME");
+        R4.add(jLabel101, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 30));
+
+        jPanel25.setLayout(new java.awt.GridLayout(2, 0, 40, 1));
+
+        jLabel102.setText("AAAAAAA");
+        jPanel25.add(jLabel102);
+
+        jLabel103.setText("AAAAAAA");
+        jPanel25.add(jLabel103);
+
+        jLabel104.setText("AAAAAAA");
+        jPanel25.add(jLabel104);
+
+        jLabel105.setText("AAAAAAA");
+        jPanel25.add(jLabel105);
+
+        jLabel106.setText("AAAAAAA");
+        jPanel25.add(jLabel106);
+
+        jLabel107.setText("AAAAAAA");
+        jPanel25.add(jLabel107);
+
+        jLabel108.setText("AAAAAAA");
+        jPanel25.add(jLabel108);
+
+        R4.add(jPanel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 240, 70));
+
+        jLabel109.setText("PUNTOS");
+        R4.add(jLabel109, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 50, 30));
+
+        barRight.add(R4);
+
+        R5.setBackground(new java.awt.Color(0, 102, 102));
+        R5.setPreferredSize(new java.awt.Dimension(65, 540));
+        R5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel110.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel110.setText("NAME");
+        R5.add(jLabel110, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 30));
+
+        jPanel27.setLayout(new java.awt.GridLayout(2, 0, 40, 1));
+
+        jLabel111.setText("AAAAAAA");
+        jPanel27.add(jLabel111);
+
+        jLabel112.setText("AAAAAAA");
+        jPanel27.add(jLabel112);
+
+        jLabel113.setText("AAAAAAA");
+        jPanel27.add(jLabel113);
+
+        jLabel114.setText("AAAAAAA");
+        jPanel27.add(jLabel114);
+
+        jLabel115.setText("AAAAAAA");
+        jPanel27.add(jLabel115);
+
+        jLabel116.setText("AAAAAAA");
+        jPanel27.add(jLabel116);
+
+        jLabel117.setText("AAAAAAA");
+        jPanel27.add(jLabel117);
+
+        R5.add(jPanel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 240, 70));
+
+        jLabel118.setText("PUNTOS");
+        R5.add(jLabel118, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 50, 30));
+
+        barRight.add(R5);
+
+        R6.setBackground(new java.awt.Color(0, 102, 102));
+        R6.setPreferredSize(new java.awt.Dimension(65, 540));
+        R6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel119.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel119.setText("NAME");
+        R6.add(jLabel119, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 30));
+
+        jPanel29.setLayout(new java.awt.GridLayout(2, 0, 40, 1));
+
+        jLabel120.setText("AAAAAAA");
+        jPanel29.add(jLabel120);
+
+        jLabel121.setText("AAAAAAA");
+        jPanel29.add(jLabel121);
+
+        jLabel122.setText("AAAAAAA");
+        jPanel29.add(jLabel122);
+
+        jLabel123.setText("AAAAAAA");
+        jPanel29.add(jLabel123);
+
+        jLabel124.setText("AAAAAAA");
+        jPanel29.add(jLabel124);
+
+        jLabel125.setText("AAAAAAA");
+        jPanel29.add(jLabel125);
+
+        jLabel126.setText("AAAAAAA");
+        jPanel29.add(jLabel126);
+
+        R6.add(jPanel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 240, 70));
+
+        jLabel127.setText("PUNTOS");
+        R6.add(jLabel127, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 50, 30));
+
+        barRight.add(R6);
+
+        R7.setBackground(new java.awt.Color(0, 102, 102));
+        R7.setPreferredSize(new java.awt.Dimension(65, 540));
+        R7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel128.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel128.setText("NAME");
+        R7.add(jLabel128, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 30));
+
+        jPanel31.setLayout(new java.awt.GridLayout(2, 0, 40, 1));
+
+        jLabel129.setText("AAAAAAA");
+        jPanel31.add(jLabel129);
+
+        jLabel130.setText("AAAAAAA");
+        jPanel31.add(jLabel130);
+
+        jLabel131.setText("AAAAAAA");
+        jPanel31.add(jLabel131);
+
+        jLabel132.setText("AAAAAAA");
+        jPanel31.add(jLabel132);
+
+        jLabel133.setText("AAAAAAA");
+        jPanel31.add(jLabel133);
+
+        jLabel134.setText("AAAAAAA");
+        jPanel31.add(jLabel134);
+
+        jLabel135.setText("AAAAAAA");
+        jPanel31.add(jLabel135);
+
+        R7.add(jPanel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 240, 70));
+
+        jLabel136.setText("PUNTOS");
+        R7.add(jLabel136, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 50, 30));
+
+        barRight.add(R7);
+
+        R8.setBackground(new java.awt.Color(0, 102, 102));
+        R8.setPreferredSize(new java.awt.Dimension(65, 540));
+        R8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel137.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel137.setText("NAME");
+        R8.add(jLabel137, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 30));
+
+        jPanel33.setLayout(new java.awt.GridLayout(2, 0, 40, 1));
+
+        jLabel138.setText("AAAAAAA");
+        jPanel33.add(jLabel138);
+
+        jLabel139.setText("AAAAAAA");
+        jPanel33.add(jLabel139);
+
+        jLabel140.setText("AAAAAAA");
+        jPanel33.add(jLabel140);
+
+        jLabel141.setText("AAAAAAA");
+        jPanel33.add(jLabel141);
+
+        jLabel142.setText("AAAAAAA");
+        jPanel33.add(jLabel142);
+
+        jLabel143.setText("AAAAAAA");
+        jPanel33.add(jLabel143);
+
+        jLabel144.setText("AAAAAAA");
+        jPanel33.add(jLabel144);
+
+        R8.add(jPanel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 240, 70));
+
+        jLabel145.setText("PUNTOS");
+        R8.add(jLabel145, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 50, 30));
+
+        barRight.add(R8);
+
+        jPanel1.add(barRight, new org.netbeans.lib.awtextra.AbsoluteConstraints(1680, 0, 240, 920));
+
+        barBottom.setBackground(new java.awt.Color(102, 0, 102));
+        barBottom.setLayout(new java.awt.GridLayout(1, 6, 3, 0));
+
+        B1.setBackground(new java.awt.Color(0, 102, 102));
+        B1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        B1.setPreferredSize(new java.awt.Dimension(65, 540));
+        B1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        name_L9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        name_L9.setText("NAME");
+        B1.add(name_L9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 30));
+
+        jPanel6.setLayout(new java.awt.GridLayout(2, 0, 40, 1));
+
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel11.setText("AAAAAAA");
+        jPanel6.add(jLabel11);
+
+        jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel20.setText("AAAAAAA");
+        jPanel6.add(jLabel20);
+
+        jLabel29.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel29.setText("AAAAAAA");
+        jPanel6.add(jLabel29);
+
+        jLabel38.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel38.setText("AAAAAAA");
+        jPanel6.add(jLabel38);
+
+        jLabel47.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel47.setText("AAAAAAA");
+        jPanel6.add(jLabel47);
+
+        jLabel56.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel56.setText("AAAAAAA");
+        jPanel6.add(jLabel56);
+
+        jLabel65.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel65.setText("AAAAAAA");
+        jPanel6.add(jLabel65);
+
+        B1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 240, 90));
+
+        jLabel146.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel146.setText("PUNTOS");
+        B1.add(jLabel146, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 50, 30));
+
+        barBottom.add(B1);
+
+        B2.setBackground(new java.awt.Color(0, 102, 102));
+        B2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        B2.setPreferredSize(new java.awt.Dimension(65, 540));
+        B2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        name_L10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        name_L10.setText("NAME");
+        B2.add(name_L10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 30));
+
+        jPanel7.setLayout(new java.awt.GridLayout(2, 0, 40, 1));
+
+        jLabel147.setText("AAAAAAA");
+        jPanel7.add(jLabel147);
+
+        jLabel148.setText("AAAAAAA");
+        jPanel7.add(jLabel148);
+
+        jLabel149.setText("AAAAAAA");
+        jPanel7.add(jLabel149);
+
+        jLabel150.setText("AAAAAAA");
+        jPanel7.add(jLabel150);
+
+        jLabel151.setText("AAAAAAA");
+        jPanel7.add(jLabel151);
+
+        jLabel152.setText("AAAAAAA");
+        jPanel7.add(jLabel152);
+
+        jLabel153.setText("AAAAAAA");
+        jPanel7.add(jLabel153);
+
+        B2.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 240, 90));
+
+        jLabel154.setText("PUNTOS");
+        B2.add(jLabel154, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 50, 30));
+
+        barBottom.add(B2);
+
+        B3.setBackground(new java.awt.Color(0, 102, 102));
+        B3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        B3.setPreferredSize(new java.awt.Dimension(65, 540));
+        B3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        name_L11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        name_L11.setText("NAME");
+        B3.add(name_L11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 30));
+
+        jPanel8.setLayout(new java.awt.GridLayout(2, 0, 40, 1));
+
+        jLabel155.setText("AAAAAAA");
+        jPanel8.add(jLabel155);
+
+        jLabel156.setText("AAAAAAA");
+        jPanel8.add(jLabel156);
+
+        jLabel157.setText("AAAAAAA");
+        jPanel8.add(jLabel157);
+
+        jLabel158.setText("AAAAAAA");
+        jPanel8.add(jLabel158);
+
+        jLabel159.setText("AAAAAAA");
+        jPanel8.add(jLabel159);
+
+        jLabel160.setText("AAAAAAA");
+        jPanel8.add(jLabel160);
+
+        jLabel161.setText("AAAAAAA");
+        jPanel8.add(jLabel161);
+
+        B3.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 240, 90));
+
+        jLabel162.setText("PUNTOS");
+        B3.add(jLabel162, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 50, 30));
+
+        barBottom.add(B3);
+
+        B4.setBackground(new java.awt.Color(0, 102, 102));
+        B4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        B4.setPreferredSize(new java.awt.Dimension(65, 540));
+        B4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        name_L12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        name_L12.setText("NAME");
+        B4.add(name_L12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 30));
+
+        jPanel9.setLayout(new java.awt.GridLayout(2, 0, 40, 1));
+
+        jLabel163.setText("AAAAAAA");
+        jPanel9.add(jLabel163);
+
+        jLabel164.setText("AAAAAAA");
+        jPanel9.add(jLabel164);
+
+        jLabel165.setText("AAAAAAA");
+        jPanel9.add(jLabel165);
+
+        jLabel166.setText("AAAAAAA");
+        jPanel9.add(jLabel166);
+
+        jLabel167.setText("AAAAAAA");
+        jPanel9.add(jLabel167);
+
+        jLabel168.setText("AAAAAAA");
+        jPanel9.add(jLabel168);
+
+        jLabel169.setText("AAAAAAA");
+        jPanel9.add(jLabel169);
+
+        B4.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 240, 90));
+
+        jLabel170.setText("PUNTOS");
+        B4.add(jLabel170, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 50, 30));
+
+        barBottom.add(B4);
+
+        B5.setBackground(new java.awt.Color(0, 102, 102));
+        B5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        B5.setPreferredSize(new java.awt.Dimension(65, 540));
+        B5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        name_L13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        name_L13.setText("NAME");
+        B5.add(name_L13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 30));
+
+        jPanel12.setLayout(new java.awt.GridLayout(2, 0, 40, 1));
+
+        jLabel171.setText("AAAAAAA");
+        jPanel12.add(jLabel171);
+
+        jLabel172.setText("AAAAAAA");
+        jPanel12.add(jLabel172);
+
+        jLabel173.setText("AAAAAAA");
+        jPanel12.add(jLabel173);
+
+        jLabel174.setText("AAAAAAA");
+        jPanel12.add(jLabel174);
+
+        jLabel175.setText("AAAAAAA");
+        jPanel12.add(jLabel175);
+
+        jLabel176.setText("AAAAAAA");
+        jPanel12.add(jLabel176);
+
+        jLabel177.setText("AAAAAAA");
+        jPanel12.add(jLabel177);
+
+        B5.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 240, 90));
+
+        jLabel178.setText("PUNTOS");
+        B5.add(jLabel178, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 50, 30));
+
+        barBottom.add(B5);
+
+        B6.setBackground(new java.awt.Color(0, 102, 102));
+        B6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        B6.setPreferredSize(new java.awt.Dimension(65, 540));
+        B6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        name_L14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        name_L14.setText("NAME");
+        B6.add(name_L14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 30));
+
+        jPanel14.setLayout(new java.awt.GridLayout(2, 0, 40, 1));
+
+        jLabel179.setText("AAAAAAA");
+        jPanel14.add(jLabel179);
+
+        jLabel180.setText("AAAAAAA");
+        jPanel14.add(jLabel180);
+
+        jLabel181.setText("AAAAAAA");
+        jPanel14.add(jLabel181);
+
+        jLabel182.setText("AAAAAAA");
+        jPanel14.add(jLabel182);
+
+        jLabel183.setText("AAAAAAA");
+        jPanel14.add(jLabel183);
+
+        jLabel184.setText("AAAAAAA");
+        jPanel14.add(jLabel184);
+
+        jLabel185.setText("AAAAAAA");
+        jPanel14.add(jLabel185);
+
+        B6.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 240, 90));
+
+        jLabel186.setText("PUNTOS");
+        B6.add(jLabel186, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 50, 30));
+
+        barBottom.add(B6);
+
+        jPanel1.add(barBottom, new org.netbeans.lib.awtextra.AbsoluteConstraints(225, 940, 1470, 130));
 
         getContentPane().add(jPanel1);
 
@@ -103,8 +1229,253 @@ public class BOARD extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel B1;
+    private javax.swing.JPanel B2;
+    private javax.swing.JPanel B3;
+    private javax.swing.JPanel B4;
+    private javax.swing.JPanel B5;
+    private javax.swing.JPanel B6;
+    private javax.swing.JPanel L1;
+    private javax.swing.JPanel L2;
+    private javax.swing.JPanel L3;
+    private javax.swing.JPanel L4;
+    private javax.swing.JPanel L5;
+    private javax.swing.JPanel L6;
+    private javax.swing.JPanel L7;
+    private javax.swing.JPanel L8;
+    private javax.swing.JPanel R1;
+    private javax.swing.JPanel R2;
+    private javax.swing.JPanel R3;
+    private javax.swing.JPanel R4;
+    private javax.swing.JPanel R5;
+    private javax.swing.JPanel R6;
+    private javax.swing.JPanel R7;
+    private javax.swing.JPanel R8;
+    private javax.swing.JPanel barBottom;
+    private javax.swing.JPanel barLeft;
+    private javax.swing.JPanel barRight;
     private javax.swing.JButton check;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel100;
+    private javax.swing.JLabel jLabel101;
+    private javax.swing.JLabel jLabel102;
+    private javax.swing.JLabel jLabel103;
+    private javax.swing.JLabel jLabel104;
+    private javax.swing.JLabel jLabel105;
+    private javax.swing.JLabel jLabel106;
+    private javax.swing.JLabel jLabel107;
+    private javax.swing.JLabel jLabel108;
+    private javax.swing.JLabel jLabel109;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel110;
+    private javax.swing.JLabel jLabel111;
+    private javax.swing.JLabel jLabel112;
+    private javax.swing.JLabel jLabel113;
+    private javax.swing.JLabel jLabel114;
+    private javax.swing.JLabel jLabel115;
+    private javax.swing.JLabel jLabel116;
+    private javax.swing.JLabel jLabel117;
+    private javax.swing.JLabel jLabel118;
+    private javax.swing.JLabel jLabel119;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel120;
+    private javax.swing.JLabel jLabel121;
+    private javax.swing.JLabel jLabel122;
+    private javax.swing.JLabel jLabel123;
+    private javax.swing.JLabel jLabel124;
+    private javax.swing.JLabel jLabel125;
+    private javax.swing.JLabel jLabel126;
+    private javax.swing.JLabel jLabel127;
+    private javax.swing.JLabel jLabel128;
+    private javax.swing.JLabel jLabel129;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel130;
+    private javax.swing.JLabel jLabel131;
+    private javax.swing.JLabel jLabel132;
+    private javax.swing.JLabel jLabel133;
+    private javax.swing.JLabel jLabel134;
+    private javax.swing.JLabel jLabel135;
+    private javax.swing.JLabel jLabel136;
+    private javax.swing.JLabel jLabel137;
+    private javax.swing.JLabel jLabel138;
+    private javax.swing.JLabel jLabel139;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel140;
+    private javax.swing.JLabel jLabel141;
+    private javax.swing.JLabel jLabel142;
+    private javax.swing.JLabel jLabel143;
+    private javax.swing.JLabel jLabel144;
+    private javax.swing.JLabel jLabel145;
+    private javax.swing.JLabel jLabel146;
+    private javax.swing.JLabel jLabel147;
+    private javax.swing.JLabel jLabel148;
+    private javax.swing.JLabel jLabel149;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel150;
+    private javax.swing.JLabel jLabel151;
+    private javax.swing.JLabel jLabel152;
+    private javax.swing.JLabel jLabel153;
+    private javax.swing.JLabel jLabel154;
+    private javax.swing.JLabel jLabel155;
+    private javax.swing.JLabel jLabel156;
+    private javax.swing.JLabel jLabel157;
+    private javax.swing.JLabel jLabel158;
+    private javax.swing.JLabel jLabel159;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel160;
+    private javax.swing.JLabel jLabel161;
+    private javax.swing.JLabel jLabel162;
+    private javax.swing.JLabel jLabel163;
+    private javax.swing.JLabel jLabel164;
+    private javax.swing.JLabel jLabel165;
+    private javax.swing.JLabel jLabel166;
+    private javax.swing.JLabel jLabel167;
+    private javax.swing.JLabel jLabel168;
+    private javax.swing.JLabel jLabel169;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel170;
+    private javax.swing.JLabel jLabel171;
+    private javax.swing.JLabel jLabel172;
+    private javax.swing.JLabel jLabel173;
+    private javax.swing.JLabel jLabel174;
+    private javax.swing.JLabel jLabel175;
+    private javax.swing.JLabel jLabel176;
+    private javax.swing.JLabel jLabel177;
+    private javax.swing.JLabel jLabel178;
+    private javax.swing.JLabel jLabel179;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel180;
+    private javax.swing.JLabel jLabel181;
+    private javax.swing.JLabel jLabel182;
+    private javax.swing.JLabel jLabel183;
+    private javax.swing.JLabel jLabel184;
+    private javax.swing.JLabel jLabel185;
+    private javax.swing.JLabel jLabel186;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
+    private javax.swing.JLabel jLabel59;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel60;
+    private javax.swing.JLabel jLabel61;
+    private javax.swing.JLabel jLabel62;
+    private javax.swing.JLabel jLabel63;
+    private javax.swing.JLabel jLabel64;
+    private javax.swing.JLabel jLabel65;
+    private javax.swing.JLabel jLabel66;
+    private javax.swing.JLabel jLabel67;
+    private javax.swing.JLabel jLabel68;
+    private javax.swing.JLabel jLabel69;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel70;
+    private javax.swing.JLabel jLabel71;
+    private javax.swing.JLabel jLabel72;
+    private javax.swing.JLabel jLabel73;
+    private javax.swing.JLabel jLabel74;
+    private javax.swing.JLabel jLabel75;
+    private javax.swing.JLabel jLabel76;
+    private javax.swing.JLabel jLabel77;
+    private javax.swing.JLabel jLabel78;
+    private javax.swing.JLabel jLabel79;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel80;
+    private javax.swing.JLabel jLabel81;
+    private javax.swing.JLabel jLabel82;
+    private javax.swing.JLabel jLabel83;
+    private javax.swing.JLabel jLabel84;
+    private javax.swing.JLabel jLabel85;
+    private javax.swing.JLabel jLabel86;
+    private javax.swing.JLabel jLabel87;
+    private javax.swing.JLabel jLabel88;
+    private javax.swing.JLabel jLabel89;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabel90;
+    private javax.swing.JLabel jLabel91;
+    private javax.swing.JLabel jLabel92;
+    private javax.swing.JLabel jLabel93;
+    private javax.swing.JLabel jLabel94;
+    private javax.swing.JLabel jLabel95;
+    private javax.swing.JLabel jLabel96;
+    private javax.swing.JLabel jLabel97;
+    private javax.swing.JLabel jLabel98;
+    private javax.swing.JLabel jLabel99;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel17;
+    private javax.swing.JPanel jPanel19;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel21;
+    private javax.swing.JPanel jPanel23;
+    private javax.swing.JPanel jPanel25;
+    private javax.swing.JPanel jPanel27;
+    private javax.swing.JPanel jPanel29;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel31;
+    private javax.swing.JPanel jPanel33;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
+    private javax.swing.JLabel name_L1;
+    private javax.swing.JLabel name_L10;
+    private javax.swing.JLabel name_L11;
+    private javax.swing.JLabel name_L12;
+    private javax.swing.JLabel name_L13;
+    private javax.swing.JLabel name_L14;
+    private javax.swing.JLabel name_L2;
+    private javax.swing.JLabel name_L3;
+    private javax.swing.JLabel name_L4;
+    private javax.swing.JLabel name_L5;
+    private javax.swing.JLabel name_L6;
+    private javax.swing.JLabel name_L7;
+    private javax.swing.JLabel name_L8;
+    private javax.swing.JLabel name_L9;
     private javax.swing.JPanel tablero;
     // End of variables declaration//GEN-END:variables
 }

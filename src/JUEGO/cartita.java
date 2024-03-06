@@ -14,14 +14,16 @@ import javax.swing.JLabel;
 public class cartita extends JButton {
 
     private String takenBy;
+    private String carta;
     private int team;
     private int row, col;
     private boolean Checked;
     private boolean alreadySequenced;
     private JLabel fichita;
 
-    public cartita(int row, int col) {
-        takenBy = "";
+    public cartita(int row, int col,String carta) {
+        this.takenBy = "";
+        this.carta = carta;
         this.row = row;
         this.col = col;
         Checked = false;

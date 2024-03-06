@@ -4,11 +4,12 @@
  */
 package MENU;
 
-import JUEGO.BOARD;
 import USUARIO.ManagerUsuarios;
 import USUARIO.Usuario;
 import java.awt.Component;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collection;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
@@ -21,7 +22,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
     /**
      * Creates new form MenuPrincipal
      */
-    ManagerUsuarios managerUsers;
+    public ManagerUsuarios managerUsers;
+    public ArrayList<String> p1, p2, p3;
+    public int cantPlayersSettings;
 
     public MenuPrincipal() {
 
@@ -31,7 +34,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
         this.REG_TAB.setVisible(false);
         this.PLAY_TAB.setVisible(false);
         this.MAIN_MENU.setVisible(false);
-        
+        this.CONFIG_TAB.setVisible(false);
+        EQUIPO3.setVisible(false);
+        this.playersThreeSc.setVisible(false);
+        tokenColor3.setVisible(false);
 
         try {
             managerUsers = new ManagerUsuarios();
@@ -40,6 +46,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
         } catch (ClassNotFoundException e) {
 
         }
+        p1 = new ArrayList<>();
+        p2 = new ArrayList<>();
+        p3 = new ArrayList<>();
+        cantPlayersSettings = 3;
 
     }
 
@@ -54,6 +64,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         MAIN_MENU = new javax.swing.JPanel();
         PLAY = new javax.swing.JButton();
+        config = new javax.swing.JButton();
         REG_TAB = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -65,13 +76,21 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         confPass = new javax.swing.JTextField();
         PLAY_TAB = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        us1 = new javax.swing.JTextField();
-        pass1 = new javax.swing.JTextField();
-        fullName1 = new javax.swing.JTextField();
-        Reg_Checkout1 = new javax.swing.JButton();
+        usersListSc = new javax.swing.JScrollPane();
+        usersList = new javax.swing.JList<>();
+        EQUIPO1 = new javax.swing.JButton();
+        EQUIPO3 = new javax.swing.JButton();
+        playesOneSc = new javax.swing.JScrollPane();
+        playersOne = new javax.swing.JList<>();
+        playersThreeSc = new javax.swing.JScrollPane();
+        playersThree = new javax.swing.JList<>();
+        tokenColor1 = new javax.swing.JComboBox<>();
+        tokenColor2 = new javax.swing.JComboBox<>();
+        EQUIPO2 = new javax.swing.JButton();
+        playersTwoSc = new javax.swing.JScrollPane();
+        playersTwo = new javax.swing.JList<>();
+        tokenColor3 = new javax.swing.JComboBox<>();
+        START = new javax.swing.JButton();
         LOG_IN = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -79,6 +98,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         passLogin = new javax.swing.JTextField();
         checkOut = new javax.swing.JButton();
         reg = new javax.swing.JButton();
+        CONFIG_TAB = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -95,7 +115,16 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 PLAYActionPerformed(evt);
             }
         });
-        MAIN_MENU.add(PLAY, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 460, 330, 90));
+        MAIN_MENU.add(PLAY, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 340, 330, 90));
+
+        config.setFont(new java.awt.Font("Ravie", 1, 24)); // NOI18N
+        config.setText("CONFIGURACION");
+        config.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                configActionPerformed(evt);
+            }
+        });
+        MAIN_MENU.add(config, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 460, 330, 90));
 
         REG_TAB.setBackground(new java.awt.Color(51, 0, 0));
         REG_TAB.setPreferredSize(new java.awt.Dimension(1920, 1080));
@@ -146,33 +175,65 @@ public class MenuPrincipal extends javax.swing.JFrame {
         PLAY_TAB.setPreferredSize(new java.awt.Dimension(1920, 1080));
         PLAY_TAB.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel4.setFont(new java.awt.Font("Ravie", 1, 24)); // NOI18N
-        jLabel4.setText("NOMBRE COMPLETO");
-        PLAY_TAB.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 290, 350, 100));
+        usersListSc.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
 
-        jLabel5.setFont(new java.awt.Font("Ravie", 1, 24)); // NOI18N
-        jLabel5.setText("USUARIO");
-        PLAY_TAB.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 420, 230, 100));
+        usersList.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        usersList.setForeground(new java.awt.Color(0, 0, 0));
+        usersList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
+        usersListSc.setViewportView(usersList);
 
-        jLabel6.setFont(new java.awt.Font("Ravie", 1, 24)); // NOI18N
-        jLabel6.setText("CONTRASEñA");
-        PLAY_TAB.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 540, 230, 100));
+        PLAY_TAB.add(usersListSc, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 110, 690, 760));
 
-        us1.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        us1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        PLAY_TAB.add(us1, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 430, 550, 80));
+        EQUIPO1.setText("Equipo 1");
+        EQUIPO1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EQUIPO1ActionPerformed(evt);
+            }
+        });
+        PLAY_TAB.add(EQUIPO1, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 140, 150, 50));
 
-        pass1.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        pass1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        PLAY_TAB.add(pass1, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 540, 550, 80));
+        EQUIPO3.setText("Equipo 3");
+        EQUIPO3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EQUIPO3ActionPerformed(evt);
+            }
+        });
+        PLAY_TAB.add(EQUIPO3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 470, 150, 50));
 
-        fullName1.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        fullName1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        PLAY_TAB.add(fullName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 300, 550, 80));
+        playersOne.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
+        playesOneSc.setViewportView(playersOne);
 
-        Reg_Checkout1.setFont(new java.awt.Font("Ravie", 1, 24)); // NOI18N
-        Reg_Checkout1.setText("REGISTRARSE");
-        PLAY_TAB.add(Reg_Checkout1, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 690, 330, 90));
+        PLAY_TAB.add(playesOneSc, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 210, 160, 150));
+
+        playersThree.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
+        playersThreeSc.setViewportView(playersThree);
+
+        PLAY_TAB.add(playersThreeSc, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 550, 160, 150));
+
+        tokenColor1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ROJO", "AZUL", "VERDE" }));
+        PLAY_TAB.add(tokenColor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 380, 160, 30));
+
+        tokenColor2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AZUL", "VERDE", "ROJO" }));
+        PLAY_TAB.add(tokenColor2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1360, 380, 160, 30));
+
+        EQUIPO2.setText("Equipo 2");
+        EQUIPO2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EQUIPO2ActionPerformed(evt);
+            }
+        });
+        PLAY_TAB.add(EQUIPO2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1360, 130, 150, 50));
+
+        playersTwo.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
+        playersTwoSc.setViewportView(playersTwo);
+
+        PLAY_TAB.add(playersTwoSc, new org.netbeans.lib.awtextra.AbsoluteConstraints(1360, 210, 160, 150));
+
+        tokenColor3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "VERDE", "ROJO", "AZUL" }));
+        PLAY_TAB.add(tokenColor3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 720, 160, 30));
+
+        START.setText("CONTINUAR");
+        PLAY_TAB.add(START, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 820, 160, 70));
 
         LOG_IN.setBackground(new java.awt.Color(51, 0, 0));
         LOG_IN.setPreferredSize(new java.awt.Dimension(1920, 1080));
@@ -212,6 +273,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
         });
         LOG_IN.add(reg, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 690, 310, 80));
 
+        CONFIG_TAB.setBackground(new java.awt.Color(51, 0, 0));
+        CONFIG_TAB.setPreferredSize(new java.awt.Dimension(1920, 1080));
+        CONFIG_TAB.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -231,6 +296,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                     .addGap(0, 6, Short.MAX_VALUE)
                     .addComponent(LOG_IN, javax.swing.GroupLayout.PREFERRED_SIZE, 1920, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(CONFIG_TAB, javax.swing.GroupLayout.DEFAULT_SIZE, 1932, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -249,6 +319,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                     .addGap(0, 6, Short.MAX_VALUE)
                     .addComponent(LOG_IN, javax.swing.GroupLayout.PREFERRED_SIZE, 1080, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(CONFIG_TAB, javax.swing.GroupLayout.DEFAULT_SIZE, 1092, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
 
         pack();
@@ -257,24 +332,28 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void PLAYActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PLAYActionPerformed
         this.PLAY_TAB.setVisible(true);
         this.MAIN_MENU.setVisible(false);
-        this.setVisible(false);
-        BOARD game = new BOARD();
-        game.setVisible(true);
+        this.usersList.setModel(this.managerUsers.listUsers(usersList));
+        if (cantPlayersSettings == 3+1 || cantPlayersSettings == 6+1) {
+            EQUIPO3.setVisible(true);
+            playersThreeSc .setVisible(true);
+            tokenColor3.setVisible(true);
+        }
+
 
     }//GEN-LAST:event_PLAYActionPerformed
 
     private void Reg_CheckoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Reg_CheckoutActionPerformed
         try {
-           
-            if (!this.fullName.getText().isEmpty()&&!this.us.getText().isEmpty()&&!this.pass.getText().isEmpty()&&!this.confPass.getText().isEmpty()) {
-                if (managerUsers.SearchUser(this.us.getText()) == null) {
+
+            if (!this.fullName.getText().isEmpty() && !this.us.getText().isEmpty() && !this.pass.getText().isEmpty() && !this.confPass.getText().isEmpty()) {
+                if (ManagerUsuarios.SearchUser(this.us.getText()) == null) {
                     if (!confPass.getText().equals(pass.getText())) {
                         JOptionPane.showMessageDialog(null, "LAS CONTRASEñA NO COINCIDE");
                         return;
                     }
-                   managerUsers.createUserFolder(fullName.getText(), us.getText(), pass.getText());
+                    managerUsers.createUserFolder(fullName.getText(), us.getText(), pass.getText());
                     JOptionPane.showMessageDialog(null, "USUARIO REGISTRADO");
-                    System.out.println(managerUsers.SearchUser(this.us.getText()).getNAME() + " Has been Registered");
+                    System.out.println(ManagerUsuarios.SearchUser(this.us.getText()).getNAME() + " Has been Registered");
 
                     //Limpieza de textFields
                     for (Component a : this.REG_TAB.getComponents()) {
@@ -288,7 +367,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
                     }
                     this.REG_TAB.setVisible(false);
                     this.LOG_IN.setVisible(true);
-                   
 
                 } else {
                     JOptionPane.showMessageDialog(null, "NOMBRE DE USUARIO EN USO");
@@ -306,36 +384,37 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     private void checkOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkOutActionPerformed
         String user, pw;
-       
+
         user = this.usLogin.getText();
         pw = this.passLogin.getText();
-      try{ 
-        if (!user.isEmpty() && !pw.isEmpty()){
-            Usuario temp = managerUsers.SearchUser(user);
-            if(temp!=null&&user.equals(temp.getUsername())&&pw.equals(temp.getPassword())){
-                JOptionPane.showMessageDialog(null, "Bienvenido "+temp.getNAME()+" ^ - ^");
-                
-                //Limpieza
-                 for (Component a : this.LOG_IN.getComponents()) {
+        try {
+            if (!user.isEmpty() && !pw.isEmpty()) {
+                Usuario temp = ManagerUsuarios.SearchUser(user);
+                if (temp != null && user.equals(temp.getUsername()) && pw.equals(temp.getPassword())) {
+                    JOptionPane.showMessageDialog(null, "Bienvenido " + temp.getNAME() + " ^ - ^");
+
+                    //Limpieza
+                    for (Component a : this.LOG_IN.getComponents()) {
 
                         if (a instanceof JTextField) {
 
-                             ((JTextField) a).setText(null);
-                            
+                            ((JTextField) a).setText(null);
+
                         }
 
                     }
-                 this.LOG_IN.setVisible(false);
-                 this.MAIN_MENU.setVisible(true);
-                 
-                
-            }else{
-                JOptionPane.showMessageDialog(null, "USUARIO O CONTRASEñA INCORRECTO");
+                    this.LOG_IN.setVisible(false);
+                    this.MAIN_MENU.setVisible(true);
+
+                } else {
+                    JOptionPane.showMessageDialog(null, "USUARIO O CONTRASEñA INCORRECTO");
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "LLENE TODOS LOS CAMPOS");
             }
-        }else  JOptionPane.showMessageDialog(null, "LLENE TODOS LOS CAMPOS");
-      }catch(IOException | ClassNotFoundException e){
-          System.out.println(e.getMessage());
-      }
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println(e.getMessage());
+        }
     }//GEN-LAST:event_checkOutActionPerformed
 
     private void regActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regActionPerformed
@@ -343,6 +422,101 @@ public class MenuPrincipal extends javax.swing.JFrame {
         this.REG_TAB.setVisible(true);
 
     }//GEN-LAST:event_regActionPerformed
+
+    private void EQUIPO1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EQUIPO1ActionPerformed
+
+        if (p1.size() > this.cantPlayersSettings) {
+            JOptionPane.showMessageDialog(null, "SE HA ALCANZADO LA CANTIDAD MAXIMA DE JUGADORES PARA ESTE EQUIPO");
+            return;
+        }
+
+        if (this.usersList.getSelectedValue() != null) {
+            String selected = this.usersList.getSelectedValue();
+
+            Collection<String> allPlayers = new ArrayList<>();
+            allPlayers.addAll(p1);
+            allPlayers.addAll(p2);
+            if (cantPlayersSettings == 3+1 || cantPlayersSettings == 6+1) {
+                allPlayers.addAll(p3);
+            }
+
+            if (allPlayers.contains(selected)) {
+                JOptionPane.showMessageDialog(null, "ESTE JUGADOR YA ES PARTE DEL EQUIPO");
+                return;
+            }
+
+            p1.add(selected);
+            this.playersOne.setListData(p1.toArray(String[]::new));
+            this.usersList.clearSelection();
+        } else {
+            JOptionPane.showMessageDialog(null, "SELECCIONE UN JUGADOR PRIMERO");
+        }
+
+
+    }//GEN-LAST:event_EQUIPO1ActionPerformed
+
+    private void EQUIPO3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EQUIPO3ActionPerformed
+        if (p3.size() > this.cantPlayersSettings) {
+            JOptionPane.showMessageDialog(null, "SE HA ALCANZADO LA CANTIDAD MAXIMA DE JUGADORES PARA ESTE EQUIPO");
+            return;
+        }
+
+        if (this.usersList.getSelectedValue() != null) {
+            String selected = this.usersList.getSelectedValue();
+
+            Collection<String> allPlayers = new ArrayList<>();
+            allPlayers.addAll(p1);
+            allPlayers.addAll(p2);
+            if (cantPlayersSettings == 3+1 || cantPlayersSettings == 6+1) {
+                allPlayers.addAll(p3);
+            }
+
+            if (allPlayers.contains(selected)) {
+                JOptionPane.showMessageDialog(null, "ESTE JUGADOR YA ES PARTE DEL EQUIPO");
+                return;
+            }
+
+            p3.add(selected);
+            this.playersThree.setListData(p3.toArray(String[]::new));
+            this.usersList.clearSelection();
+        } else {
+            JOptionPane.showMessageDialog(null, "SELECCIONE UN JUGADOR PRIMERO");
+        }
+    }//GEN-LAST:event_EQUIPO3ActionPerformed
+
+    private void EQUIPO2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EQUIPO2ActionPerformed
+        if (p2.size() > this.cantPlayersSettings) {
+            JOptionPane.showMessageDialog(null, "SE HA ALCANZADO LA CANTIDAD MAXIMA DE JUGADORES PARA ESTE EQUIPO");
+            return;
+        }
+
+        if (this.usersList.getSelectedValue() != null) {
+            String selected = this.usersList.getSelectedValue();
+
+            Collection<String> allPlayers = new ArrayList<>();
+            allPlayers.addAll(p1);
+            allPlayers.addAll(p2);
+            if (cantPlayersSettings == 3+1 || cantPlayersSettings == 6+1) {
+                allPlayers.addAll(p3);
+            }
+
+            if (allPlayers.contains(selected)) {
+                JOptionPane.showMessageDialog(null, "ESTE JUGADOR YA ES PARTE DEL EQUIPO");
+                return;
+            }
+
+            p2.add(selected);
+            this.playersTwo.setListData(p2.toArray(String[]::new));
+            this.usersList.clearSelection();
+        } else {
+            JOptionPane.showMessageDialog(null, "SELECCIONE UN JUGADOR PRIMERO");
+        }
+    }//GEN-LAST:event_EQUIPO2ActionPerformed
+
+    private void configActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_configActionPerformed
+        this.MAIN_MENU.setVisible(false);
+        this.CONFIG_TAB.setVisible(true);
+    }//GEN-LAST:event_configActionPerformed
 
     /**
      * @param args the command line arguments
@@ -380,32 +554,42 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel CONFIG_TAB;
+    private javax.swing.JButton EQUIPO1;
+    private javax.swing.JButton EQUIPO2;
+    private javax.swing.JButton EQUIPO3;
     private javax.swing.JPanel LOG_IN;
     private javax.swing.JPanel MAIN_MENU;
     private javax.swing.JButton PLAY;
     private javax.swing.JPanel PLAY_TAB;
     private javax.swing.JPanel REG_TAB;
     private javax.swing.JButton Reg_Checkout;
-    private javax.swing.JButton Reg_Checkout1;
+    private javax.swing.JButton START;
     private javax.swing.JButton checkOut;
     private javax.swing.JTextField confPass;
+    private javax.swing.JButton config;
     private javax.swing.JTextField fullName;
-    private javax.swing.JTextField fullName1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField pass;
-    private javax.swing.JTextField pass1;
     private javax.swing.JTextField passLogin;
+    private javax.swing.JList<String> playersOne;
+    private javax.swing.JList<String> playersThree;
+    private javax.swing.JScrollPane playersThreeSc;
+    private javax.swing.JList<String> playersTwo;
+    private javax.swing.JScrollPane playersTwoSc;
+    private javax.swing.JScrollPane playesOneSc;
     private javax.swing.JButton reg;
+    private javax.swing.JComboBox<String> tokenColor1;
+    private javax.swing.JComboBox<String> tokenColor2;
+    private javax.swing.JComboBox<String> tokenColor3;
     private javax.swing.JTextField us;
-    private javax.swing.JTextField us1;
     private javax.swing.JTextField usLogin;
+    private javax.swing.JList<String> usersList;
+    private javax.swing.JScrollPane usersListSc;
     // End of variables declaration//GEN-END:variables
 }

@@ -32,7 +32,7 @@ public class boardManager {
     public void initBoard(JPanel pan) {
         for (int row = 0; row < 10; row++) {
             for (int col = 0; col < 10; col++) {
-                lol[row][col] = new cartita(row, col);
+                lol[row][col] = new cartita(row, col, cartas[row][col]);
 
                 lol[row][col].setBounds((pan.getWidth() / 10) * col, (pan.getHeight() / 10) * row, (pan.getWidth() / 10), (pan.getHeight() / 10));
 
@@ -60,7 +60,7 @@ public class boardManager {
 
                     //SWITCH USUARIO EN TURNO.GET TEAM, CAMBIA EL COLOR DE LA FICHA
                     ImageIcon neoFicha = new ImageIcon("CARDS/redToken.png");
-                    Image Scalecard = neoFicha.getImage().getScaledInstance(lol[Fila][Columna].getWidth(), lol[Fila][Columna].getHeight(), Image.SCALE_SMOOTH);
+                    Image Scalecard = neoFicha.getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH);
                     neoFicha = new ImageIcon(Scalecard);
                     lol[Fila][Columna].getFichita().setIcon(neoFicha);
                 });
@@ -69,8 +69,16 @@ public class boardManager {
 
             }
         }
+        lol[0][0].setChecked(true);
+        lol[9][0].setChecked(true);
+        lol[0][9].setChecked(true);
+        lol[9][9].setChecked(true);
+
     }
 
+//    public void sideBarsFiller(JPanel left, JPanel right,int cantPlayers){
+//        for()
+//    }
     private void takeCard(int row, int col) {
         if (lol[row][col].getTakenBy().equals("")) {
             lol[row][col].claimCard("a", 1);
@@ -86,12 +94,12 @@ public class boardManager {
             for (int col = 0; col < 10; col++) {
                 if (lol[row][col].isChecked()) {
 
-                    if (this.checkXnY(row, col)||this.checkDiagonal(row, col)) {
+                    if (this.checkXnY(row, col) || this.checkDiagonal(row, col)) {
                         JOptionPane.showMessageDialog(null, "SECUENCIA ENCONTRADA");
                         return true;
                     }
 
-                } 
+                }
             }
         }
 
@@ -194,5 +202,7 @@ public class boardManager {
     private boolean validPos(int row, int col) {
         return row >= 0 && row < lol.length && col >= 0 && col < lol.length;
     }
+
+ 
 
 }

@@ -13,6 +13,8 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.RandomAccessFile;
 import java.util.ArrayList;
+import javax.swing.DefaultListModel;
+import javax.swing.JList;
 
 /**
  *
@@ -20,7 +22,7 @@ import java.util.ArrayList;
  */
 public class ManagerUsuarios {
 
-    private RandomAccessFile RAF = null;
+    private static RandomAccessFile RAF = null;
     private File F;
     public static ArrayList<Usuario> users;
 
@@ -78,13 +80,13 @@ public class ManagerUsuarios {
 
     }
 
-    public Usuario SearchUser(String username) throws IOException, ClassNotFoundException {
+    public static Usuario SearchUser(String username) throws IOException, ClassNotFoundException {
         File route = new File("Usuarios");
         return DeSerializer(username, 0, route);
     }
 
     //RECURSIVA
-    private Usuario DeSerializer(String username, int index, File route) throws IOException, ClassNotFoundException {
+    private static Usuario DeSerializer(String username, int index, File route) throws IOException, ClassNotFoundException {
 
         Usuario tempUser = null;
 
@@ -114,12 +116,20 @@ public class ManagerUsuarios {
 
         return tempUser;
     }
-    
-    public String[] listUsers(){
+
+    private String[] listUsers() {
         F = new File("Usuarios");
-        System.out.println("Hola");
         return F.list();
-        
+
+    }
+
+    public DefaultListModel listUsers(JList list) {
+        DefaultListModel<String> model = new DefaultListModel();
+        for (String user : this.listUsers()) {
+
+            model.addElement(user);
+        }
+        return listUsers() != null ? model : null;
     }
 
 }
